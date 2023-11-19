@@ -1,6 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@pinia/nuxt", "@nuxtjs/google-fonts", "nuxt-lucide-icons"],
+  modules: ["@pinia/nuxt", "@nuxtjs/eslint-module", "@nuxtjs/google-fonts", "nuxt-lucide-icons"],
   devtools: { enabled: true },
   runtimeConfig: {
     public: {
@@ -11,7 +10,9 @@ export default defineNuxtConfig({
     namePrefix: "Icon"
   },
   googleFonts: {
-    Roboto: true
+    families: {
+      Roboto: [300, 400, 500]
+    }
   },
   components: [
     {
